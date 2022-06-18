@@ -6,17 +6,17 @@
         //faire un cosole log du script
         
             await fetch(datajson)
-            .then((response) => 
+            .then((response) => {
              if (response.ok) {
                 return response.json();
             } else {
-                console.log(`Une erreur de type ${response.status}  est survenu ! `);
+                console.log("error");
             }
-            )
+        })
             .then((response) => {photo = response.photo }
         
       
-     }
+     )}
 
 
 
