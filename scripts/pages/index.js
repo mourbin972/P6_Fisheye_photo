@@ -1,13 +1,21 @@
-    import photographers from "../../data/photographers.js"
-
+     //import { photographers } from "./data/photographers.js";
+    const datajson =  "../../data/photographers.js";
     async function getPhotographers()
      {
         // Penser à remplacer par les données récupérées dans le json
         //faire un cosole log du script
+        
+            await fetch(datajson)
+            .then((response) => 
+             if (response.ok) {
+                return response.json();
+            } else {
+                console.log(`Une erreur de type ${response.status}  est survenu ! `);
+            }
+            )
+            .then((response) => {photo = response.photo }
+        
       
-      var json = JSON.parse($.getJSON({'url': "../../data/photographers.json", 'async': false}).responseText);
-
-      console.log(JSON); 
      }
 
 
@@ -57,5 +65,9 @@ fetch ("data/photographers.json")
             return data.json();
         }
     })
+
+     var json = JSON.parse($.getJSON({'url': "../../data/photographers.json", 'async': false}).responseText);
+
+      console.log(JSON);
 
 */
