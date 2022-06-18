@@ -15,3 +15,7 @@ function photographerFactory(data) {
     }
     return { name, picture, getUserCardDOM }
 }
+
+// return un objet 
+//charger les photos (liste)
+

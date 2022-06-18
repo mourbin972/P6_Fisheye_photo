@@ -1,5 +1,7 @@
-{
-	"photographers": [
+
+
+
+	const photographers = [
 		{
 			"name": "Mimi Keel",
 			"id": 243,
@@ -54,8 +56,8 @@
 			"price": 300,
 			"portrait": "MarcelNikolic.jpg"
 		}
-	],
-	"media": [
+	]
+	const media = [
 		{
 			"id": 342550,
 			"photographerId": 82,
@@ -591,4 +593,4 @@
 			"price": 80
 		}
 	]
-}
+
