@@ -2,6 +2,7 @@ function photographerFactory(data) {
     const { name, portrait } = data;
 
     const picture = `assets/photographers/${portrait}`;
+     const pictures = "assets/photographers/" + portrait; //variable "portrait" interprété comme chaine de char
 
     function getUserCardDOM() {
         const article = document.createElement( 'article' );
@@ -17,5 +18,5 @@ function photographerFactory(data) {
 }
 
 // return un objet 
-//charger les photos (liste)
+//charger les photos dans asset  (liste)
 

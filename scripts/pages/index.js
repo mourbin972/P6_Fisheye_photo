@@ -1,22 +1,19 @@
      //import { photographers } from "./data/photographers.js";
-    const datajson =  "../../data/photographers.js";
+    
     async function getPhotographers()
+
      {
+
         // Penser à remplacer par les données récupérées dans le json
-        //faire un cosole log du script
+        //faire un cosonle log du script +return liste photograph
+
         
-            await fetch(datajson)
-            .then((response) => {
-             if (response.ok) {
-                return response.json();
-            } else {
-                console.log("error");
-            }
-        })
-            .then((response) => {photo = response.photo }
-        
-      
-     )}
+       console.log(photographers);
+       return photographers;
+
+
+
+           }
 
 
 
@@ -35,7 +32,7 @@
 
     async function init() {
         // Récupère les datas des photographes
-        const { photographers } = await getPhotographers();
+        const  photographers  = await getPhotographers(); //{}= objet dont la propriété = result.photographers !! plus un objet dc pas d'accolade
         displayData(photographers);
     };
     
@@ -69,5 +66,20 @@ fetch ("data/photographers.json")
      var json = JSON.parse($.getJSON({'url': "../../data/photographers.json", 'async': false}).responseText);
 
       console.log(JSON);
+
+
+      ----------
+       await fetch(datajson)
+            .then((response) => {
+             if (response.ok) {
+                return response.json();
+            } else {
+                console.log("error");
+            }
+        })
+            .then((response) => {photo = response.photo }
+        
+      
+     )
 
 */
