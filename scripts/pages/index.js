@@ -1,6 +1,6 @@
      //import { photographers } from "./data/photographers.js";
     
-    async function getPhotographers()
+    async function getPhotographers() //relié au json de photographe
 
      {
 
@@ -13,20 +13,18 @@
 
 
 
-           }
-
-
-
-    
+     }
+   
         // et bien retourner le tableau photographers seulement une fois
      
-    async function displayData(photographers) {
-        const photographersSection = document.querySelector(".photographer_section");
+    async function displayData(photographers) { 
+        const photographersSection = document.querySelector(".photographer_section"); //prend la classe dans le html 
 
-        photographers.forEach((photographer) => {
-            const photographerModel = photographerFactory(photographer);
-            const userCardDOM = photographerModel.getUserCardDOM();
-            photographersSection.appendChild(userCardDOM);
+        photographers.forEach((photographer) => { // photographer = nom donné à chaque ligne pour le "for each"
+            const photographerModel = photographerFactory(photographer);//creer sans appeler
+            const userCardDOM = photographerModel.getUserCardDOM(); //creer une carte à chaque fois
+            photographersSection.appendChild(userCardDOM);   //appelle la carte           
+
         });
     };
 
