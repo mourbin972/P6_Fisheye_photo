@@ -2,17 +2,9 @@
     
     async function getPhotographers() //relié au json de photographe
 
-     {
-
-        // Penser à remplacer par les données récupérées dans le json
-        //faire un cosonle log du script +return liste photograph
-
-        
-       console.log(photographers);
-       return photographers;
-
-
-
+     {        
+       console.log(photographers);  // Penser à remplacer par les données récupérées dans le json
+       return photographers; //faire un cosonle log du script +return liste photograph
      }
    
         // et bien retourner le tableau photographers seulement une fois
@@ -33,8 +25,40 @@
         const  photographers  = await getPhotographers(); //{}= objet dont la propriété = result.photographers !! plus un objet dc pas d'accolade
         displayData(photographers);
     };
-    
+
     init();
+
+
+    async function getMedia()
+    {
+        console.log(media);
+        return (media);
+    }
+
+    async function displayData(media)
+    {
+        const mediaSection = document.querySelector(".media_section"); 
+
+        media.forEach((medias) => 
+        {
+            const mediaModel = mediaFactory(medias);
+            const mediaCardDom = mediaModel.getmediaCardDom();
+            mediaSection.appendChild(mediaCardDom);
+        });
+
+    }
+
+    async function initm(){
+        const media = await getMedia();
+        displayData(media);
+    };
+
+    initm();
+
+
+
+    
+    
     
     /*
 
