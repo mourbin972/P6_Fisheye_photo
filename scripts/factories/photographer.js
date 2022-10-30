@@ -1,5 +1,5 @@
 function photographerFactory(data) {
-    const { name, city, country,tagline, price, portrait,  } = data; //ajouter tout les elements issue du jsons de photographers.js
+    const { name, city, country,tagline, price, portrait  } = data; //ajouter tout les elements issue du jsons de photographers.js
 
     const picture = `assets/photographers/${portrait}`;
      //const pictures = "assets/photographers/" + portrait;    //variable "portrait" interprété comme chaine de char
@@ -9,7 +9,10 @@ function photographerFactory(data) {
         const article = document.createElement( 'article' );
         const img = document.createElement( 'img' );
         img.setAttribute("src", picture);
-
+// creeer lien ici  a/href
+        const link = document.createElement('a');
+        link.href = "scripts/utils/media.html";
+        
         const h2 = document.createElement( 'h2' );
         h2.textContent = name;
         const h3 = document.createElement( 'h3' );
@@ -37,3 +40,5 @@ function photographerFactory(data) {
 //charger les photos dans asset  (liste)
 
 // mettre/ajouter le "html" dans js du photographer evec create element 
+
+// "methode filter" de js = recuperer les id et afficher les donnée correspondantes 

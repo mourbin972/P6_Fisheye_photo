@@ -57,7 +57,7 @@
 
 
 
-    
+    let idfilter = photographers.filter(id)
     
     
     /*
